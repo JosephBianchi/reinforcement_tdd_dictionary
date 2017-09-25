@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './dictionary.rb'
+require 'pry'
 
 class TestDictionary < MiniTest::Test
   def setup
@@ -47,6 +48,7 @@ class TestDictionary < MiniTest::Test
   def test_finds_nothing_if_prefix_matches_nothing
     @d.add('fiend')
     @d.add('great')
+    # binding.pry
     assert_empty @d.find('nothing')
   end
 
